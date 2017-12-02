@@ -265,13 +265,14 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
+  devMountainEmployees.push(tyler,cahlan,ryan,colt)
+  console.log(devMountainEmployees.length)
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
-
-
+  devMountainEmployees=devMountainEmployees.filter(x => x.name !== "Cahlan")
 
 
 //NEXT PROBLEM
@@ -283,6 +284,7 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 
   //Code Here
+  let users = []
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
@@ -296,6 +298,21 @@ var user1 = {
 };
 
 //Your Code Here
+let user2 = {
+  name: "Brett Hays",
+  email: "brett@fakemail.com",
+  password: "iamBrett",
+  username: "bretthays"
+}
+
+let user3 = {
+  name: "Mike Cooper",
+  email: "mike@fakemail.com",
+  password: "iammike",
+  username: "mikecooper"
+}
+
+users.push(user1,user2,user3)
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -306,5 +323,5 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
   //Code Here
-
+  users=users.filter(x => x.email !== "tylermcginnis33@gmail.com")
 //The activity we just did is very much how data works in 'the real world'.
