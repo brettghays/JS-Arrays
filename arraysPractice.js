@@ -5,6 +5,7 @@ var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
   //Code Here
+let first = (arr) => arr[0];
 
 
 //Next problem
@@ -16,6 +17,7 @@ var arr = [40,50,60];
 
 
   //Code Here
+let last = (arr) => arr[arr.length-1]
 
 
 //Next Problem
@@ -25,6 +27,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
+let looper = arr => {
+  for(i=0;i<arr.length;i++){
+    alert(arr[i])
+  }
+}
 
 
 //Next problem
@@ -35,6 +42,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
+let reversedLooper = arr => {
+  for(i=arr.length-1;i>=0;i--){
+    alert(arr[i])
+  }
+}
 
 
 //Next Problem
@@ -44,6 +56,7 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
+let evenFinder = arr => arr.filter(x => x%2===0)
 
 
 
@@ -74,6 +87,13 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
   //Code Here
 
+let divider = arr => {
+  var newArr = []
+  newArr.push(arr.filter(x => x % 2 === 0))
+  newArr.push(arr.filter(x => x%2))
+  return newArr
+}
+
 
 //Next Problem
 
@@ -87,6 +107,10 @@ var getRandomArbitrary = function() {
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
+  let finder = (arr, cb) => {
+    return arr.filter(x => x === cb())
+    
+  }
 
 
 
@@ -111,6 +135,9 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+  let removeItem = (arr, str) => {
+    
+  }
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
