@@ -107,9 +107,13 @@ var getRandomArbitrary = function() {
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
-  let finder = (arr, cb) => {
-    return arr.filter(x => x === cb())
-    
+  let finder = arr => {
+    var randNum = getRandomArbitrary()
+    for(i=0;i<arr.length;i++){
+      if(arr[i]===randNum){
+        return true
+      } 
+    } return false
   }
 
 
@@ -136,7 +140,16 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
   let removeItem = (arr, str) => {
-    
+    for(i=0;i<arr.length;i++){
+        if(arr[i]===str){
+          arr.splice(arr[i],1)
+        }
+      } return arr    
+  }
+
+  let addItem = (arr, str) => {
+     arr.push(str)
+     return arr    
   }
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
@@ -151,6 +164,12 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
+  let maker = () => {
+    let arr = []
+    for (i=1;i<=215;i++){
+      arr.push(i)
+    } return arr
+  }
 
 
 
@@ -162,6 +181,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
+  let addTen = arr => {
+    var newArr = [];    
+    for( var i = 0; i < arr.length; i++ ) {
+       newArr.push(Number(arr[i])+10) 
+      } 
+    return newArr;
+  }
 
 
 
@@ -183,7 +209,7 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
-
+ let longer = (arr1,arr2) => arr1.length>arr2.length?arr1:arr2
 
 /*
 As a continuation of the previous problem, write another function called 'both'.
@@ -196,7 +222,10 @@ Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
   //Code Here
-
+  let both = (arr1,arr2) => {
+    let newArr=arr1.filter(x => arr2.includes(x))
+    return newArr
+  }
 
 
 
